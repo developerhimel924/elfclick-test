@@ -93,13 +93,41 @@
 
     @endforelse
 
+
+<!-- Recommended Categories Section Start -->
+    <section class="container animate__animated animate__fadeInUp">
+        <div class="Recommended__categories__Section some_image_section">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147392/contentservice/groceries.png_Syea2lyuO.png" alt="" class="some_row_image">
+                </div>
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147387/contentservice/kitchenn%20needs.png_Sk1a3lyuu.png" alt="" class="some_row_image">
+                </div>
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147392/contentservice/video%20games.png_B1kT3g1O_.png" alt="" class="some_row_image">
+                </div>
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147408/contentservice/smartphones.png_ryDC2eJ_d.png" alt="" class="some_row_image">
+                </div>
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147404/contentservice/hometheatres.png_BJe02e1ud.png" alt="" class="some_row_image">
+                </div>
+                <div class="col-md-2 col-sm-4 col-12">
+                    <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1620147384/contentservice/furntures.png_BJyT3xkdu.png" alt="" class="some_row_image">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Recommended Categories Section Start -->
+
     @php
-      $auth = Auth::user();
+    $auth = Auth::user();
     @endphp
     @if (!empty($auth))
-      @php
-         $activites = DB::table('activities')->where('user_id', Auth::id())->limit(6)->orderBy('id', 'desc')->get();
-      @endphp
+    @php
+    $activites = DB::table('activities')->where('user_id', Auth::id())->limit(6)->orderBy('id', 'desc')->get();
+    @endphp
     <section class="container animate__animated animate__fadeInUp">
         <div class="recommended__title">
             <h3>Last browsed products</h3>
@@ -107,9 +135,9 @@
 
         <div class="recommended__container">
             <div class="row">
-              @forelse ($activites as $products)
+                @forelse ($activites as $products)
                 @php
-                  $productDetails = DB::table('products')->where('id', $products->product_id)->first();
+                $productDetails = DB::table('products')->where('id', $products->product_id)->first();
                 @endphp
                 <div class="recommended__Items col-md-4 col-sm-6 col-12">
                     <a href="{{ route('view',$productDetails->slug) }}" class="recommended__content">
@@ -125,19 +153,19 @@
                         </div>
                     </a>
                 </div>
-              @empty
-              <div class="recommended__Items col-md-4 col-sm-6 col-12">
-                  <div class="recommended__content">
-                      <div class="recommended__items__details">
-                          <p>Oops... No products in history</p>
-                      </div>
-                  </div>
-              </div>
-              @endforelse
+                @empty
+                <div class="recommended__Items col-md-4 col-sm-6 col-12">
+                    <div class="recommended__content">
+                        <div class="recommended__items__details">
+                            <p>Oops... No products in history</p>
+                        </div>
+                    </div>
+                </div>
+                @endforelse
             </div>
         </div>
     </section>
-  @endif
+    @endif
 
 
     @php
@@ -344,8 +372,9 @@
                 </div>--}}
 
                 @php
-                    $sectionTwo = \App\Models\Section::sectionsTwo();
-                     /*echo "<pre>"; print_r($sectionTwo); die();*/
+                $sectionTwo = \App\Models\Section::sectionsTwo();
+                /*echo "
+                <pre>"; print_r($sectionTwo); die();*/
                 @endphp
 
                 {{-- @if (empty($sectionTwo)) --}}

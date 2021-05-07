@@ -111,15 +111,15 @@
     border-radius: 5px;
 }
 .accordion:after {
-    content: "−"; /* Unicode character for "plus" sign (+) */
+    content: "−"; 
     font-size: 15px;
     color: #777;
     float: right;
     margin-left: 5px;
 }
 
-.active:after {
-    content: "+"; /* Unicode character for "minus" sign (-) */
+.accordion.active:after {
+    content: "+"; 
 }
 .active,
 .accordion:hover {

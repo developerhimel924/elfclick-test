@@ -145,10 +145,6 @@
                                         </ul>
                                     </div>
                                   @endforeach
-
-                                    <div class="col-md-3">
-                                        <img style="height: auto; width:250px;" src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/comp21.png" alt="">
-                                    </div>
                                 </div>
 
                             </div>

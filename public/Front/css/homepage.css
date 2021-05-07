@@ -498,3 +498,11 @@ button.saveforlater__btn > i {
 button.saveforlater__btn:hover > i {
     color: orange;
 }
+.Product__img>img:hover {
+    transform: scale(1.1);
+}
+
+.Product__img>img {
+    transition: all .5s ease;
+    cursor: pointer;
+}

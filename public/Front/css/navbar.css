@@ -141,6 +141,7 @@ a.myCart__btn:hover {
     margin: auto;
     background: #fba100;
     width: 100%;
+    position: relative;
 }
 ul.menu {
     margin: 0rem;
@@ -153,7 +154,6 @@ ul.menu > li {
     list-style: none;
     padding: 0.8rem 2.5rem;
     transition: all 0.2s cubic-bezier(0, 0, 0.68, 0.69);
-    position: relative;
 }
 
 ul.menu > li > a {
@@ -290,8 +290,8 @@ li#show__all__Categories:hover div.megaMenuMainCategoryContainer {
     background: #ffffff;
     top: 0;
     right: -121.5rem;
-    box-shadow: 0px 0px 10px -6px #000;
-    width: 121.5rem;
+    box-shadow: 0px 50px 500px -50px #000;
+    width: 142rem;
     height: 50rem;
     padding: 20px;
     transform-origin: left;
@@ -337,14 +337,14 @@ li.computer__nav__list:hover div.computer__subCat__nav__list__div {
 }
 
 .computer__subCat__nav__list__div {
-    top: 3.55rem;
+    top: 35px;
     border-radius: 10px;
     transform-origin: top;
     transform: scale(0);
     transition: all 0.3s ease;
 }
 .computerAbsolutePosition {
-    left: -20%;
+    left: 12.2%;
 }
 
 .PhoneAbsolutePosition {
